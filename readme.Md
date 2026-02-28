@@ -33,3 +33,41 @@ This project demonstrates a production-grade batch data pipeline using the Medal
 ├── scripts/                   # Python scripts for data loading
 ├── requirements.txt           # Python dependencies
 └── README.md
+
+
+How to Run the Project
+1. Prerequisites
+Python 3.9+ installed
+
+Access to [Your chosen Data Warehouse] credentials
+
+Git
+
+2. Setup the Environment
+Clone the repository and install the required dependencies:
+
+Bash
+git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
+cd your-repo-name
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+pip install -r requirements.txt
+3. Initialize dbt
+Navigate to the dbt project folder and configure your connection profile:
+
+Bash
+cd dbt_project
+dbt debug  # Verifies connection to the Data Warehouse
+4. Run the Pipeline
+Execute the models in order (Bronze -> Silver -> Gold):
+
+Bash
+dbt seed   # Loads raw CSV data into the warehouse (if using seeds)
+dbt run    # Executes the SQL models to build tables/views
+dbt test   # Runs data quality tests
+5. Generate Documentation
+Generate and serve the documentation and data lineage graph:
+
+Bash
+dbt docs generate
+dbt docs serve
