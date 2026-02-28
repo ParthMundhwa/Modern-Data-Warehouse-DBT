@@ -1,23 +1,23 @@
 # Modern Data Warehouse with dbt (Medallion Architecture)
 
-## 📌 Project Overview
+## Project Overview
 This project demonstrates a production-grade batch data pipeline using the Medallion Architecture (Bronze, Silver, Gold layers) and **dbt (data build tool)**. It extracts raw e-commerce data, loads it into a cloud data warehouse, and transforms it into business-ready analytical tables.
 
 
 
-## 🎯 Objectives
+## Objectives
 * **Data Modeling:** Implement a scalable Medallion Architecture.
 * **Data Quality:** Enforce data integrity using dbt tests (unique, not_null, accepted_values).
 * **Version Control:** Maintain data transformations as code (Analytics Engineering).
 * **Documentation:** Auto-generate data lineage graphs and data dictionaries.
 
-## 🛠️ Tech Stack
+## Tech Stack
 * **Data Warehouse:** [Google BigQuery / Snowflake / PostgreSQL]
 * **Transformation Engine:** dbt Core
 * **Language:** SQL, Python (for initial load)
 * **Containerization:** Docker (optional, for running dbt)
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 ├── data/                      # Raw seed data (CSV)
