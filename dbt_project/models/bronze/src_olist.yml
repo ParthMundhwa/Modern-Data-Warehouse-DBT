@@ -1,0 +1,41 @@
+version: 2
+
+sources:
+  - name: olist
+    database: dbtbigquery-488818
+    schema: raw_olist
+    tables:
+      - name: raw_customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+              - not_null
+      - name: raw_geolocation
+      - name: raw_order_items
+      - name: raw_order_payments
+      - name: raw_order_reviews
+      - name: raw_orders
+        columns:
+          - name: order_id
+            tests:
+              - unique
+              - not_null
+      - name: raw_products
+        columns:
+          - name: product_id
+            tests:
+              - unique
+              - not_null
+      - name: raw_sellers
+        columns:
+          - name: seller_id
+            tests:
+              - unique
+              - not_null
+      - name: raw_product_category_name_translation
+        columns:
+          - name: product_category_name
+            tests:
+              - unique
+              - not_null

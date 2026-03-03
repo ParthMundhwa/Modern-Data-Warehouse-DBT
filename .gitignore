@@ -1,0 +1,20 @@
+# dbt
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
+
+# Python virtual environment
+dbtvenv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Data
+data/*.csv
+data/**/*.csv
+
+# OS generated
+.DS_Store
+Thumbs.db
